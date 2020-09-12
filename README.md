@@ -33,3 +33,9 @@ Los otros errores que existen (entre muchos otros más) son los siguientes:
 * **Error 404: Not Found**
 
   No se pudo encontrar el recurso solicitado, pero es posible que esté disponible en el futuro. Se permiten solicitudes posteriores por parte del cliente. [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
+### 4. Realice una nueva conexión con telnet, esta vez a:
+* Host: www.httpbin.org
+* Puerto: 80
+* Versión HTTP: 1.1
+Ahora, solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
