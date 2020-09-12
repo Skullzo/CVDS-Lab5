@@ -19,6 +19,7 @@ Al ejecutar el comando del paso anterior, vemos que no podemos ver lo que escrib
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/TelnetConectado.PNG">
 Después, vemos que aparece el error **400**, que representa **Bad Request** o una solicitud incorrecta, que significa que el servidor no puede o no procesará la solicitud debido a un aparente error del cliente.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/TelnetError.PNG">
+
 Los otros errores que existen (entre muchos otros más) son los siguientes:
 * **Error 401: Unauthorized**
   
