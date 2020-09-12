@@ -39,3 +39,6 @@ Los otros errores que existen (entre muchos otros más) son los siguientes:
 * Puerto: 80
 * Versión HTTP: 1.1
 Ahora, solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
+
+Luego de ejecutar el comando ```telnet www.httpbin.org 80```, vemos que nos aparece lo siguiente.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HTTPbin%20correcto.PNG">
