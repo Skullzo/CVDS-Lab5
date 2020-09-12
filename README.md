@@ -291,4 +291,5 @@ public class Service {
    }
 }
 ```
-En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete 
+En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete ```edu.eci.cvds.servlet```, quedando de la siguiente forma.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/ClaseService.PNG">
