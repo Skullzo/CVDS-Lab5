@@ -52,7 +52,6 @@ Pegue el contenido del portapapeles con ```CTRL-SHIFT-V``` y presione ```CTRL-D`
 Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: ¿Cuál es la diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
 
 Luego de guardar el contenido del HTML en un txt, y ejecutar el comando ```wc -c```, vemos que nos aparece el conteo total de caracteres, de la siguiente forma.
-
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HTTPbinWordCount.PNG">
 
 La diferencia entre los métodos **GET** y **POST** radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método **GET** envía los datos usando la URL, el método **POST** los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario). [aprendeaprogramar.com](https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=527:get-y-post-html-method-formas-de-envio-de-datos-en-formulario-diferencias-y-ventajas-ejemplos-cu00721b&catid=69&Itemid=192#:~:text=La%20diferencia%20entre%20los%20m%C3%A9todos,%22ocultos%22%20al%20usuario)
@@ -69,3 +68,6 @@ curl -i www.httpbin.org
 ```
 
 ¿Cuáles son las diferencias con los diferentes parámetros?
+
+Luego de ejecutar el comando ```curl www.httpbin.org```, vemos que nos aparece todo el código HTML de la página web **www.httpbin.org**.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURLwww.httpbin.org.PNG">
