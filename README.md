@@ -191,4 +191,16 @@ Y luego agregamos la seccion build al final del tag ```project``` en el archivo 
 </build>
 ```
 3. Revise en el pom.xml para qué puerto TCP/IP está configurado el servidor embebido de Tomcat (ver sección de plugins).
+
 El puerto TCP/IP al que está configurado el servidor embebido de Tomcat es el **8080**, que es el puerto de **Tomcat**.
+4. Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
+```
+mvn package
+mvn tomcat7:run
+```
+Primero compilamos el proyecto con el comando ```mvn package```. Vemos que la compilación ha sido satisfactoria.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CompilacionWebApp.PNG">
+Luego ejecutamos la aplicación en el servidor embebido Tomcat usando el comando ```mvn tomcat7:run``` de la siguiente forma.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CompilacionTomcat.PNG">
+Después en nuestro navegador ingresamos el URL ```localhost:8080```. Vemos que nos retorna **Hello World**, lo cual nos indica que el procedimiento realizado ha sido un éxito.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HelloWorldTomcat.PNG">
