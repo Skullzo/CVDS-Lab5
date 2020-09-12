@@ -72,3 +72,5 @@ curl -i www.httpbin.org
 
 Luego de ejecutar el comando ```curl www.httpbin.org```, vemos que nos aparece todo el código HTML de la página web **www.httpbin.org**.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURLwww.httpbin.org.PNG">
+Después, al ejecutar el comando ```curl -v www.httpbin.org```, vemos que nos muestra detalladamente que hizo una conexión a la dirección IP **3.221.81.55** por el puerto **80**, realiza el **GET** al host **www.httpbin.org**, el cual muestra que ha sido **Aceptado**, y después si muestra el HTML de la página web.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURL-vwww.httpbin.org.PNG">
