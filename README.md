@@ -50,3 +50,6 @@ Luego de ejecutar el comando ```telnet www.httpbin.org 80```, vemos que nos apar
 Pegue el contenido del portapapeles con ```CTRL-SHIFT-V``` y presione ```CTRL-D``` (fin de archivo de Linux). Si no termina el comando ```wc``` presione ```CTRL-D``` de nuevo. No presione mas de dos veces ```CTRL-D``` indica que se termino la entrada y puede cerrarle la terminal. Debe salir el resultado de la cantidad de caracteres que tiene el contenido HTML que respondió el servidor.
 
 Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: ¿Cuál es la diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
+
+Luego de guardar el contenido del HTML en un txt, y ejecutar el comando ```wc -c```, vemos que nos aparece el conteo total de caracteres, de la siguiente forma.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HTTPbinWordCount.PNG">
