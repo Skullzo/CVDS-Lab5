@@ -79,5 +79,39 @@ Ahora, al ejecutar el comando ```curl -i www.httpbin.org```, vemos que a diferen
 
 ## Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
 En este ejercicio, va a implementar una aplicación Web muy básica, haciendo uso de los elementos de más bajo nivel de Java-EE (Enterprise Edition), con el fin de revisar los conceptos del protocolo HTTP. En este caso, se trata de un módulo de consulta de clientes Web que hace uso de una librería de acceso a datos disponible en un repositorio Maven local.
+
 Para esto, cree un proyecto maven nuevo usando el arquetipo de aplicación Web estándar maven-archetype-webapp y realice lo siguiente:
 1. Revise la clase SampleServlet incluida a continuacion, e identifique qué hace:
+```
+package edu.eci.cvds.servlet;
+
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Optional;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(
+    urlPatterns = "/helloServlet"
+)
+public class SampleServlet extends HttpServlet{
+    static final long serialVersionUID = 35L;
+
+    @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       Writer responseWriter = resp.getWriter();
+       Optional<String> optName = Optional.ofNullable(req.getParameter("name"));
+       String name = optName.isPresent() && !optName.get().isEmpty() ? optName.get() : "";
+
+       resp.setStatus(HttpServletResponse.SC_OK);
+       responseWriter.write("Hello" + name + "!");
+       responseWriter.flush();
+   }
+}
+```
+Revise qué valor tiene el parámetro ‘urlPatterns’ de la anotación @WebServlet, pues este indica qué URLs atiende las peticiones el servlet.
+
+El valor del parámetro 'urlPatterns' de la anotación @WebServlet es ```/helloServlet```, el cual utilizaremos posteriormente para realizar el localhost.
