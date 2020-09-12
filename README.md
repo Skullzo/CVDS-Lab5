@@ -131,3 +131,64 @@ Para realizar el siguiente procedimiento, primero creamos el proyecto **Servlet*
 ```
 A continuación, agregamos la siguiente dependencia en el ```pom.xml``` a nuestro proyecto que hemos abierto en Eclipse.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/DependenciaPOM.PNG">
+Y luego agregamos la seccion build al final del tag ```project``` en el archivo ```pom.xml```:
+```
+<build>
+   <plugins>
+       <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.8.0</version>
+           <configuration>
+               <source>1.8</source>
+               <target>1.8</target>
+           </configuration>
+       </plugin>
+       <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-war-plugin</artifactId>
+           <version>2.3</version>
+           <configuration>
+               <failOnMissingWebXml>false</failOnMissingWebXml>
+           </configuration>
+       </plugin>
+       <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-dependency-plugin</artifactId>
+           <version>2.6</version>
+           <executions>
+               <execution>
+                   <phase>validate</phase>
+                   <goals>
+                       <goal>copy</goal>
+                   </goals>
+                   <configuration>
+                       <silent>true</silent>
+                       <artifactItems>
+                           <artifactItem>
+                               <groupId>javax</groupId>
+                               <artifactId>javaee-endorsed-api</artifactId>
+                               <version>7.0</version>
+                               <type>jar</type>
+                           </artifactItem>
+                       </artifactItems>
+                   </configuration>
+               </execution>
+           </executions>
+       </plugin>
+
+       <!-- Tomcat embedded plugin. -->
+       <plugin>
+           <groupId>org.apache.tomcat.maven</groupId>
+           <artifactId>tomcat7-maven-plugin</artifactId>
+           <version>2.2</version>
+           <configuration>
+               <port>8080</port>
+               <path>/</path>
+           </configuration>
+       </plugin>
+   </plugins>
+</build>
+```
+3. Revise en el pom.xml para qué puerto TCP/IP está configurado el servidor embebido de Tomcat (ver sección de plugins).
+El puerto TCP/IP al que está configurado el servidor embebido de Tomcat es el **8080**, que es el puerto de **Tomcat**.
