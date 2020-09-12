@@ -42,3 +42,9 @@ Ahora, solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
 
 Luego de ejecutar el comando ```telnet www.httpbin.org 80```, vemos que nos aparece lo siguiente.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HTTPbin%20correcto.PNG">
+
+### 5. Seleccione el contenido ```HTML``` de la respuesta y copielo al cortapapeles ```CTRL-SHIFT-C```. Ejecute el comando ```wc``` (word count) para contar palabras con la opción ```-c``` para contar el número de caracteres:
+```wc -c```
+Pegue el contenido del portapapeles con ```CTRL-SHIFT-V``` y presione ```CTRL-D``` (fin de archivo de Linux). Si no termina el comando ```wc``` presione ```CTRL-D``` de nuevo. No presione mas de dos veces ```CTRL-D``` indica que se termino la entrada y puede cerrarle la terminal. Debe salir el resultado de la cantidad de caracteres que tiene el contenido HTML que respondió el servidor.
+
+Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: ¿Cuál es la diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
