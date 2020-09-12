@@ -74,3 +74,5 @@ Luego de ejecutar el comando ```curl www.httpbin.org```, vemos que nos aparece t
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURLwww.httpbin.org.PNG">
 Después, al ejecutar el comando ```curl -v www.httpbin.org```, vemos que nos muestra detalladamente que hizo una conexión a la dirección IP **3.221.81.55** por el puerto **80**, realiza el **GET** al host **www.httpbin.org**, el cual muestra que ha sido **Aceptado**, y después si muestra el HTML de la página web.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURL-vwww.httpbin.org.PNG">
+Ahora, al ejecutar el comando ```curl -i www.httpbin.org```, vemos que a diferencia del comando ```curl -v www.httpbin.org```, este al principio no muestra información detallada del **GET**, sino que muestra la fecha y hora en que se realizó la consulta del HTML, acompañado del tipo, que es **HTML**, la longitud, el tipo de conexión, el servidor al que se conectó, y luego si el código HTML.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURL-iwww.httpbin.org.PNG">
