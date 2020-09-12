@@ -5,4 +5,5 @@
 * Host: www.escuelaing.edu.co
 * Puerto: 80
 * Teniendo en cuenta los parámetros del comando telnet: ```telnet HOST PORT```
+Para realizar este procedimiento, ejecutamos el siguiente comando en la consola de comandos Windows.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/TelnetHostYPuerto.PNG">
