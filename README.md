@@ -213,3 +213,12 @@ Para probar que el código funciona correctamente, ingresamos en nuestro navegad
 A continuación, agregamos la dependencia del artefacto ```gson``` en el proyecto en Eclipse de la siguiente forma.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/DependenciaGSON.PNG">
+### 8. En el navegador revise la dirección https://jsonplaceholder.typicode.com/todos/1. Intente cambiando diferentes números al final del ```path``` de la url.
+Al dejar primero el número 1 al final de la URL, vemos que nos aparece lo siguiente.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CambioPathURL1.PNG">
+
+Luego, al ingresar el número 2 al final de la URL, vemos que cambia el valor del atributo **id** de **1** a **2** y el valor del atributo de **delectus aut autem** a **quis ut nam facilis et officia qui**.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CambioPathURL2.PNG">
+
+Después al ingresar el número 3 al final de la URL, vemos que cambia el valor del atributo **id** de **2** a **3** y el valor del atributo **title** de **quis ut nam facilis et officia qui** a **fugiat veniam minus**.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CambioPathURL3.PNG">
