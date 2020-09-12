@@ -223,3 +223,72 @@ Luego, al ingresar el número 2 al final de la URL, vemos que cambia el valor de
 
 Después al ingresar el número 3 al final de la URL, vemos que cambia el valor del atributo **id** de **2** a **3** y el valor del atributo **title** de **quis ut nam facilis et officia qui** a **fugiat veniam minus**.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CambioPathURL3.PNG">
+
+### 9. Basado en la respuesta que le da el servicio del punto anterior, cree la clase ```edu.eci.cvds.servlet.model.Todo``` con un constructor vacío y los métodos ```getter``` y ```setter``` para las propiedades de los "To Dos" que se encuentran en la url indicada.
+A continuación, creamos primero la clase **Todo** dentro del paquete ```edu.eci.cvds.servlet.model```, la cual le ingresamos los atributos ```userId```, ```id```, ```title``` y ```completed``` y creamos los respectivos ```getter``` y ```setter```.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CreacionGetterSetter.PNG">
+
+Luego al crear los ```getter``` y ```setter``` en la imagen anterior, vemos que quedan de la siguiente forma en la clase **Todo**.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/GetterYSetter.PNG">
+
+### 10. Utilice la siguiente clase para consumir el servicio que se encuentra en la dirección url del punto anterior:
+```
+package edu.eci.cvds.servlet;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.List;
+
+import com.google.gson.Gson;
+
+import edu.eci.cvds.servlet.model.Todo;
+
+public class Service {
+
+   public static Todo getTodo(int id) throws MalformedURLException, IOException {
+       URL urldemo = new URL("https://jsonplaceholder.typicode.com/todos/" + id);
+       URLConnection yc = urldemo.openConnection();
+       BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+       Gson gson = new Gson();
+       Todo todo = gson.fromJson(in, Todo.class);
+       in.close();
+       return todo;
+   }
+
+   private static String todoToHTMLRow(Todo todo) {
+       return new StringBuilder("<tr>")
+           .append("<td>")
+           .append(todo.getUserId())
+           .append("</td><td>")
+           .append(todo.getId())
+           .append("</td><td>")
+           .append(todo.getTitle())
+           .append("</td><td>")
+           .append(todo.getCompleted())
+           .append("</td>")
+           .append("</tr>")
+           .toString();
+   }
+
+   public static String todosToHTMLTable(List<Todo> todoList) {
+       StringBuilder stringBuilder = new StringBuilder("<table>")
+           .append("<tr>")
+           .append("<th>User Id</th>")
+           .append("<th>Id</th>")
+           .append("<th>Title</th>")
+           .append("<th>Completed</th>")
+           .append("</tr>");
+
+       for (Todo todo : todoList) {
+           stringBuilder.append(todoToHTMLRow(todo));
+       }
+
+       return stringBuilder.append("</table>").toString();
+   }
+}
+```
+En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete 
