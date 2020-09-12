@@ -55,4 +55,17 @@ Luego de guardar el contenido del HTML en un txt, y ejecutar el comando ```wc -c
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HTTPbinWordCount.PNG">
 
-La diferencia entre los métodos **GET** y **POST** radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método **GET** envía los datos usando la URL, el método **POST** los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario). [aprendeaprogramar.com](https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=527:get-y-post-html-method-formas-de-envio-de-datos-en-formulario-diferencias-y-ventajas-ejemplos-cu00721b&catid=69&Itemid=192#:~:text=La%20diferencia%20entre%20los%20m%C3%A9todos,%22ocultos%22%20al%20usuario).
+La diferencia entre los métodos **GET** y **POST** radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método **GET** envía los datos usando la URL, el método **POST** los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario). [aprendeaprogramar.com](https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=527:get-y-post-html-method-formas-de-envio-de-datos-en-formulario-diferencias-y-ventajas-ejemplos-cu00721b&catid=69&Itemid=192#:~:text=La%20diferencia%20entre%20los%20m%C3%A9todos,%22ocultos%22%20al%20usuario)
+
+### 6. En la practica no se utiliza ```telnet``` para hacer peticiones a sitios web sino el comando ```curl``` con ayuda de la linea de comandos:
+
+```curl www.httpbin.org```
+
+Utilice ahora el parámetro ```-v``` y con el parámetro ```-i```:
+
+```
+curl -v www.httpbin.org
+curl -i www.httpbin.org
+```
+
+¿Cuáles son las diferencias con los diferentes parámetros?
