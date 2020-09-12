@@ -115,3 +115,18 @@ public class SampleServlet extends HttpServlet{
 Revise qué valor tiene el parámetro ‘urlPatterns’ de la anotación @WebServlet, pues este indica qué URLs atiende las peticiones el servlet.
 
 El valor del parámetro 'urlPatterns' de la anotación @WebServlet es ```/helloServlet```, el cual utilizaremos posteriormente para realizar el localhost.
+La clase lo que hace es principalmente imprimir un Hello junto con el parámetro que le ingresemos en el URL, y si no ingresamos ningún parámetro, imprime simplemente **Hello World!**
+
+Para realizar el siguiente procedimiento, primero creamos el proyecto **Servlet**, el cual lo hacemos mediante Maven.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CreacionProyectoServlet.PNG">
+
+2. En el pom.xml, modifique la propiedad "packaging" con el valor "war". Agregue la siguiente dependencia:
+```
+<dependency>
+     <groupId>javax</groupId>
+     <artifactId>javaee-web-api</artifactId>
+     <version>7.0</version>
+     <scope>provided</scope>
+</dependency>
+```
+A continuación, agregamos la siguiente dependencia en el ```pom.xml``` a nuestro proyecto que hemos abierto en Eclipse.
