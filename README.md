@@ -202,5 +202,12 @@ Primero compilamos el proyecto con el comando ```mvn package```. Vemos que la co
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CompilacionWebApp.PNG">
 Luego ejecutamos la aplicación en el servidor embebido Tomcat usando el comando ```mvn tomcat7:run``` de la siguiente forma.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CompilacionTomcat.PNG">
-Después en nuestro navegador ingresamos el URL ```localhost:8080```. Vemos que nos retorna **Hello World**, lo cual nos indica que el procedimiento realizado ha sido un éxito.
+Después en nuestro navegador ingresamos el URL ```localhost:8080```. Vemos que nos retorna **Hello World!**, lo cual nos indica que el procedimiento realizado ha sido un éxito.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HelloWorldTomcat.PNG">
+5. Abra un navegador, y en la barra de direcciones ponga la URL con la cual se le enviarán peticiones al ‘SampleServlet’. Tenga en cuenta que la URL tendrá como host ‘localhost’, como puerto, el configurado en el pom.xml y el path debe ser el del Servlet. Debería obtener un mensaje de saludo.
+6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp).
+Para probar que el código funciona correctamente, ingresamos en nuestro navegador web la URL ```localhost:8080/helloServlet?name=Alejandro```. Vemos que ahora nos retorna **Hello Alejandro!** en la página web.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/MensajeSaludoWebApp.PNG">
+7. Busque el artefacto ```gson``` en el repositorio de ```maven``` y agregue la dependencia.
+A continuación, agregamos la dependencia del artefacto ```gson``` en el proyecto en Eclipse de la siguiente forma.
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/DependenciaGSON.PNG">
