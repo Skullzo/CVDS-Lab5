@@ -19,16 +19,16 @@ Al ejecutar el comando del paso anterior, vemos que no podemos ver lo que escrib
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/TelnetConectado.PNG">
 Después, vemos que aparece el error **400**, que representa **Bad Request** o una solicitud incorrecta, que significa que el servidor no puede o no procesará la solicitud debido a un aparente error del cliente.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/TelnetError.PNG">
-Los otros errores que existen son los siguientes:
+Los otros errores que existen (entre muchos otros más) son los siguientes:
 * **Error 401: Unauthorized**
   
   Similar al **Error 403: Forbidden**, pero específicamente para usar cuando se requiere autenticación y ha fallado o aún no se ha proporcionado. La respuesta debe incluir un campo de encabezado WWW-Authenticate que contenga un desafío aplicable al recurso solicitado. Consulte Autenticación de acceso básica y Autenticación de acceso Digest. 401 semánticamente significa "no autorizado", el usuario no tiene credenciales de autenticación válidas para el recurso de destino. [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 * **Error 402: Payment Required**
 
   Reservado para uso futuro. La intención original era que este código se pudiera usar como parte de alguna forma de efectivo digital o esquema de micropagos, como lo propuso, por ejemplo, GNU Taler, pero eso aún no ha sucedido y este código no se usa ampliamente. La API de Google Developers usa este estado si un desarrollador en particular ha superado el límite diario de solicitudes. Sipgate usa este código si una cuenta no tiene fondos suficientes para iniciar una llamada. Shopify usa este código cuando la tienda no ha pagado sus tarifas y está temporalmente inhabilitada. Stripe usa este código para pagos fallidos donde los parámetros eran correctos, por ejemplo, pagos fraudulentos bloqueados. [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-* 
-* 
-* 
-* 
-* 
-* 
+* **Error 403: Forbidden**
+
+  La solicitud contenía datos válidos y fue entendida por el servidor, pero el servidor rechaza la acción. Esto puede deberse a que el usuario no tiene los permisos necesarios para un recurso o necesita una cuenta de algún tipo, o al intentar una acción prohibida (por ejemplo, crear un registro duplicado donde solo se permite uno). Este código también se usa normalmente si la solicitud proporcionó autenticación respondiendo al desafío del campo de encabezado WWW-Authenticate, pero el servidor no aceptó esa autenticación. La solicitud no debe repetirse. [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+* **Error 404: Not Found**
+
+  No se pudo encontrar el recurso solicitado, pero es posible que esté disponible en el futuro. Se permiten solicitudes posteriores por parte del cliente. [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
