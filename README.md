@@ -193,6 +193,7 @@ Y luego agregamos la seccion build al final del tag ```project``` en el archivo 
 3. Revise en el pom.xml para qué puerto TCP/IP está configurado el servidor embebido de Tomcat (ver sección de plugins).
 
 El puerto TCP/IP al que está configurado el servidor embebido de Tomcat es el **8080**, que es el puerto de **Tomcat**.
+
 4. Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
 ```
 mvn package
@@ -210,4 +211,5 @@ Para probar que el código funciona correctamente, ingresamos en nuestro navegad
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/MensajeSaludoWebApp.PNG">
 7. Busque el artefacto ```gson``` en el repositorio de ```maven``` y agregue la dependencia.
 A continuación, agregamos la dependencia del artefacto ```gson``` en el proyecto en Eclipse de la siguiente forma.
+
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/DependenciaGSON.PNG">
