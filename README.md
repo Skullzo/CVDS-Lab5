@@ -1,5 +1,5 @@
 # Laboratorio 5
-## Preguntas del Laboratorio
+## Parte I. - Jugando a ser un cliente HTTP
 ### 1. Abra una terminal Linux o consola de comandos Windows.
 ### 2. Realice una conexión síncrona TCP/IP a través de Telnet al siguiente servidor:
 * Host: www.escuelaing.edu.co
@@ -76,3 +76,8 @@ Después, al ejecutar el comando ```curl -v www.httpbin.org```, vemos que nos mu
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURL-vwww.httpbin.org.PNG">
 Ahora, al ejecutar el comando ```curl -i www.httpbin.org```, vemos que a diferencia del comando ```curl -v www.httpbin.org```, este al principio no muestra información detallada del **GET**, sino que muestra la fecha y hora en que se realizó la consulta del HTML, acompañado del tipo, que es **HTML**, la longitud, el tipo de conexión, el servidor al que se conectó, y luego si el código HTML.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CURL-iwww.httpbin.org.PNG">
+
+## Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
+En este ejercicio, va a implementar una aplicación Web muy básica, haciendo uso de los elementos de más bajo nivel de Java-EE (Enterprise Edition), con el fin de revisar los conceptos del protocolo HTTP. En este caso, se trata de un módulo de consulta de clientes Web que hace uso de una librería de acceso a datos disponible en un repositorio Maven local.
+Para esto, cree un proyecto maven nuevo usando el arquetipo de aplicación Web estándar maven-archetype-webapp y realice lo siguiente:
+1. Revise la clase SampleServlet incluida a continuacion, e identifique qué hace:
