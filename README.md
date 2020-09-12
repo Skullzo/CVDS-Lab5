@@ -131,6 +131,7 @@ Para realizar el siguiente procedimiento, primero creamos el proyecto **Servlet*
 ```
 A continuación, agregamos la siguiente dependencia en el ```pom.xml``` a nuestro proyecto que hemos abierto en Eclipse.
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/DependenciaPOM.PNG">
+
 Y luego agregamos la seccion build al final del tag ```project``` en el archivo ```pom.xml```:
 ```
 <build>
