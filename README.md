@@ -52,4 +52,5 @@ Pegue el contenido del portapapeles con ```CTRL-SHIFT-V``` y presione ```CTRL-D`
 Claro está, las peticiones GET son insuficientes en muchos casos. Investigue: ¿Cuál es la diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
 
 Luego de guardar el contenido del HTML en un txt, y ejecutar el comando ```wc -c```, vemos que nos aparece el conteo total de caracteres, de la siguiente forma.
+
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/HTTPbinWordCount.PNG">
