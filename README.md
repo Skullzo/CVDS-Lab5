@@ -321,3 +321,8 @@ Implemente dicho método de manera que:
 * Con el identificador recibido, consulte el item por hacer de la lista de cosas por hacer, usando la clase "Service" creada en el punto 10.
 * Si el item existe:
   * Responder con el código HTTP que equivale a ‘OK’ (ver referencia anterior), y como contenido de dicha respuesta, el código html correspondiente a una página con una tabla que tenga los detalles del item, usando la clase "Service" creada en el punto 10 par crear la tabla.
+* Si el item no existe:
+  * Responder con el código correspondiente a ‘no encontrado’, y con el código de una página html que indique que no existe un item con el identificador dado.
+* Si no se paso parámetro opcional, o si el parámetro no contiene un número entero, devolver el código equivalente a requerimiento inválido.
+* Si se genera la excepcion MalformedURLException devolver el código de error interno en el servidor
+* Para cualquier otra excepcion, devolver el código equivalente a requerimiento inválido.
