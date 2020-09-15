@@ -372,3 +372,7 @@ Al cambiar el método **POST** por **GET**, realizamos el siguiente cambio en el
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/IndexFormulario.PNG">
  
 La diferencia entre el **POST** y el **GET** es que en el **POST** no aparece el ```id=1```, y con el **GET** si aparece el ```id=1```.
+
+### 21. ¿Qué se está viendo? Revise cómo están implementados los métodos de la clase Service.java para entender el funcionamiento interno.
+
+El método ```todoToHTMLRow``` lo que hace es realizar las filas de la tabla, y el método ```todosToHTMLTable``` lo que hace es realizar las columnas de la tabla.
