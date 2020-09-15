@@ -309,11 +309,14 @@ A continuación, agregamos la anotación ```@WebServlet``` y definimos la propie
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/WebServlet.PNG">
 
 ### 13. Teniendo en cuenta las siguientes métodos disponibles en los objetos ServletRequest y ServletResponse recibidos por el método doGet:
+
 * response.setStatus(N); <- Indica con qué código de error N se generará la respuesta. Usar la clase HttpServletResponse para indicar el código de respuesta.
 * request.getParameter(param); <- Consulta el parámetro recibido, asociado al nombre ‘param’.
 * response.getWriter() <- Retorna un objeto PrintWriter a través del cual se le puede enviar la respuesta a quien hizo la petición.
 * response.setContentType(T) <- Asigna el tipo de contenido (MIME type) que se entregará en la respuesta.
+
 Implemente dicho método de manera que:
+
 * Asuma que la petición HTTP recibe como parámetro el número de id de una lista de cosas por hacer (todo), y que dicha identificación es un número entero.
 * Con el identificador recibido, consulte el item por hacer de la lista de cosas por hacer, usando la clase "Service" creada en el punto 10.
 * Si el item existe:
