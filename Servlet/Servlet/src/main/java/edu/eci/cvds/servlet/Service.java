@@ -39,6 +39,11 @@ public class Service {
            .toString();
    }
 
+   public static String getHTMLError (int errorNumber, String Message) {
+	return "<html><head><title> Apache - Errror Report </title> ";
+	   
+   }
+   
    public static String todosToHTMLTable(List<Todo> todoList) {
        StringBuilder stringBuilder = new StringBuilder("<table>")
            .append("<tr>")

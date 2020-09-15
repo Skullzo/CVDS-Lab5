@@ -23,6 +23,7 @@ public class Todo {
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
@@ -31,5 +32,10 @@ public class Todo {
 	}
 	public void setCompleted(Object completed) {
 		this.completed = completed;
+	}
+	
+	@Override
+	public String toString() {
+		return "Todo [userId=" + userId + ", id=" + id + ", title=" + title + ", completed=" + completed + "]";
 	}
 }
