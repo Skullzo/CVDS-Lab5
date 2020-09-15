@@ -359,8 +359,14 @@ A continuación, creamos el archivo ```index.html``` en el directorio ```src/mai
 
 ### 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usar como método ‘POST’, y como acción, la ruta relativa del último servlet creado (es decir la URL pero excluyendo ‘http://localhost:8080/’).
 
-Ahora, creamos un formulario que tenga un campo para ingresar un número con un botón de la siguiente forma.
+### 19. Revise este ejemplo de validación de formularios con javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browser se valide que el valor ingresado es un valor numérico.
+
+Ahora, para los puntos **18** y **19**, creamos un formulario que tenga un campo para ingresar un número con un botón de la siguiente forma.
+
+<img  src=https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/indexPOST.PNG">
+
+### 20. Recompile y ejecute la aplicación. Abra en su navegador en la página del formulario, y rectifique que la página hecha anteriormente sea mostrada. Ingrese los datos y verifique los resultados. Cambie el formulario para que ahora en lugar de POST, use el método GET . Qué diferencia observa?
+
+Al cambiar el método **POST** por **GET**, realizamos el siguiente cambio en el HTML.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/IndexFormulario.PNG">
-
-### 19. Revise este ejemplo de validación de formularios con javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browser se valide que el valor ingresado es un valor numérico.
