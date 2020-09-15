@@ -300,7 +300,7 @@ En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete ```ed
 
 Primero, creamos la clase **SampleServletService** que hereda de la clae **HttpServlet**, en la cual sobreescribimos el método heredado ```doGet```, quedando de la siguiente forma.
 
-<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/OverrideYdoGet.PNG">
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CreacionClaseServlet.PNG">
 
 ### 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación ```@WebServlet```, y en dicha anotación, defina la propiedad ```urlPatterns```, indicando la URL (que usted defina) a la cual se asociará el servlet.
 
