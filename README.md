@@ -297,3 +297,64 @@ En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete ```ed
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/ClaseService.PNG">
 
 ### 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado ```doGet```. Incluya la anotación ```@Override``` para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
+
+Primero, creamos la clase **SampleServletService** que hereda de la clae **HttpServlet**, en la cual sobreescribimos el método heredado ```doGet```, quedando de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CreacionClaseServlet.PNG">
+
+### 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación ```@WebServlet```, y en dicha anotación, defina la propiedad ```urlPatterns```, indicando la URL (que usted defina) a la cual se asociará el servlet.
+
+A continuación, agregamos la anotación ```@WebServlet``` y definimos la propiedad ```urlPatterns``` con el URL definido que es ```/cosasPorHacer```.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/WebServlet.PNG">
+
+### 13. Teniendo en cuenta las siguientes métodos disponibles en los objetos ServletRequest y ServletResponse recibidos por el método doGet:
+
+* response.setStatus(N); <- Indica con qué código de error N se generará la respuesta. Usar la clase HttpServletResponse para indicar el código de respuesta.
+* request.getParameter(param); <- Consulta el parámetro recibido, asociado al nombre ‘param’.
+* response.getWriter() <- Retorna un objeto PrintWriter a través del cual se le puede enviar la respuesta a quien hizo la petición.
+* response.setContentType(T) <- Asigna el tipo de contenido (MIME type) que se entregará en la respuesta.
+
+Implemente dicho método de manera que:
+
+* Asuma que la petición HTTP recibe como parámetro el número de id de una lista de cosas por hacer (todo), y que dicha identificación es un número entero.
+* Con el identificador recibido, consulte el item por hacer de la lista de cosas por hacer, usando la clase "Service" creada en el punto 10.
+* Si el item existe:
+  * Responder con el código HTTP que equivale a ‘OK’ (ver referencia anterior), y como contenido de dicha respuesta, el código html correspondiente a una página con una tabla que tenga los detalles del item, usando la clase "Service" creada en el punto 10 par crear la tabla.
+* Si el item no existe:
+  * Responder con el código correspondiente a ‘no encontrado’, y con el código de una página html que indique que no existe un item con el identificador dado.
+  * Si no se paso parámetro opcional, o si el parámetro no contiene un número entero, devolver el código equivalente a requerimiento inválido.
+  * Si se genera la excepcion MalformedURLException devolver el código de error interno en el servidor
+  * Para cualquier otra excepcion, devolver el código equivalente a requerimiento inválido.
+
+Para indicar si el item existe o no existe, creamos un ArrayList con las cosas por hacer, y agregamos todo a la lista de cosas por hacer, en la cual mostramos la tabla HTML usando Service, e importamos el paquete **MalformedURLException** para manejar todas las excepciones que se generan dependiendo del tipo de error que se genera (ya sea Not Found, Bad Request o Internal Server Error, quedando de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/OverrideYdoGet.PNG">
+
+## Parte III.
+
+### 16. En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
+
+A continuación, implementamos el método ```doPost```, quedando de la siguiente forma (similar a la implementación del ```doGet```).
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/MetododoPost.PNG">
+
+### 17. Cree el archivo ```index.html``` en el directorio ```src/main/webapp/index.html``` de la siguiente manera:
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
+```
+
+A continuación, creamos el archivo ```index.html``` en el directorio ```src/main/webapp/index.html``` de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/indexHTML.PNG">
+
+### 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usar como método ‘POST’, y como acción, la ruta relativa del último servlet creado (es decir la URL pero excluyendo ‘http://localhost:8080/’).
