@@ -297,3 +297,6 @@ En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete ```ed
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/ClaseService.PNG">
 
 ### 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado ```doGet```. Incluya la anotación ```@Override``` para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
+
+Primero, creamos la clase **SampleServletService** que hereda de la clae **HttpServlet**, en la cual sobreescribimos el método heredado ```doGet```, quedando de la siguiente forma.
+<img  src="">
