@@ -356,3 +356,5 @@ A continuación, implementamos el método ```doPost```, quedando de la siguiente
 A continuación, creamos el archivo ```index.html``` en el directorio ```src/main/webapp/index.html``` de la siguiente forma.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/indexHTML.PNG">
+
+### 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usar como método ‘POST’, y como acción, la ruta relativa del último servlet creado (es decir la URL pero excluyendo ‘http://localhost:8080/’).
