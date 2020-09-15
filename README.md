@@ -370,3 +370,5 @@ Ahora, para los puntos **18** y **19**, creamos un formulario que tenga un campo
 Al cambiar el método **POST** por **GET**, realizamos el siguiente cambio en el HTML.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/IndexFormulario.PNG">
+ 
+La diferencia entre el **POST** y el **GET** es que en el **POST** no aparece el ```id=1```, y con el **GET** si aparece el ```id=1```.
