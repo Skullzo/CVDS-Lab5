@@ -378,3 +378,15 @@ La diferencia entre el **POST** y el **GET** es que en el **POST** no aparece el
 En el código de **Service.java** que vemos a continuación, el método ```todoToHTMLRow``` lo que hace es realizar las filas de la tabla, y el método ```todosToHTMLTable``` lo que hace es realizar las columnas de la tabla.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/ClaseServiceHTTP.PNG">
+
+## Parte IV. - Frameworks Web MVC – Java Server Faces / Prime Faces
+
+En este ejercicio, usted va a desarrollar una aplicación Web basada en el marco JSF, y en una de sus implementaciones más usadas: PrimeFaces. 
+
+Escriba una aplicación web que utilice PrimeFaces para calcular la media, la moda, la desviación estándar y varianza de un conjunto de N números reales. Este conjunto de N números reales deben ser ingresados por el usuario de manera que puedan ser utilizados para los cálculos.
+
+**Diagrama de casos de uso de la aplicación:**
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CasoDeUsoAplicacion.PNG">
+
+## 1. Al proyecto Maven, debe agregarle las dependencias mas recientes de ```javax.javaee-api```, ```com.sun.faces.jsf-api```, ```com.sun.faces.jsf-impl```, ```javax.servlet.jstl``` y Primefaces (en el archivo pom.xml).
