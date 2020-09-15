@@ -326,3 +326,7 @@ Implemente dicho método de manera que:
   * Si no se paso parámetro opcional, o si el parámetro no contiene un número entero, devolver el código equivalente a requerimiento inválido.
   * Si se genera la excepcion MalformedURLException devolver el código de error interno en el servidor
   * Para cualquier otra excepcion, devolver el código equivalente a requerimiento inválido.
+
+Para indicar si el item existe o no existe, creamos un ArrayList con las cosas por hacer, y agregamos todo a la lista de cosas por hacer, en la cual mostramos la tabla HTML usando Service, e importamos el paquete **MalformedURLException** para manejar todas las excepciones que se generan dependiendo del tipo de error que se genera (ya sea Not Found, Bad Request o Internal Server Error, quedando de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/OverrideYdoGet.PNG">
