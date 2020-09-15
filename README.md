@@ -338,3 +338,21 @@ Para indicar si el item existe o no existe, creamos un ArrayList con las cosas p
 A continuación, implementamos el método ```doPost```, quedando de la siguiente forma (similar a la implementación del ```doGet```).
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/MetododoPost.PNG">
+
+### 17. Cree el archivo ```index.html``` en el directorio ```src/main/webapp/index.html``` de la siguiente manera:
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
+```
+
+A continuación, creamos el archivo ```index.html``` en el directorio ```src/main/webapp/index.html``` de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/indexHTML.PNG">
