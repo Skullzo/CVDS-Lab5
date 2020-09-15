@@ -304,6 +304,6 @@ Primero, creamos la clase **SampleServletService** que hereda de la clae **HttpS
 
 ### 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación ```@WebServlet```, y en dicha anotación, defina la propiedad ```urlPatterns```, indicando la URL (que usted defina) a la cual se asociará el servlet.
 
-A continuación, agregamos la anotación ```@WebServlet``` y definimos la propiedad ```urlPatterns``` como se muestra a continuación.
+A continuación, agregamos la anotación ```@WebServlet``` y definimos la propiedad ```urlPatterns``` con el URL definido que es ```/cosasPorHacer```.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/WebServlet.PNG">
