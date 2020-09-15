@@ -375,4 +375,6 @@ La diferencia entre el **POST** y el **GET** es que en el **POST** no aparece el
 
 ### 21. ¿Qué se está viendo? Revise cómo están implementados los métodos de la clase Service.java para entender el funcionamiento interno.
 
-El método ```todoToHTMLRow``` lo que hace es realizar las filas de la tabla, y el método ```todosToHTMLTable``` lo que hace es realizar las columnas de la tabla.
+En el código de **Service.java** que vemos a continuación, el método ```todoToHTMLRow``` lo que hace es realizar las filas de la tabla, y el método ```todosToHTMLTable``` lo que hace es realizar las columnas de la tabla.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/ClaseServiceHTTP.PNG">
