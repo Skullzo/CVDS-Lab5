@@ -299,4 +299,11 @@ En nuestro proyecto de Eclipse, creamos la clase **Service** en el paquete ```ed
 ### 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado ```doGet```. Incluya la anotación ```@Override``` para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
 
 Primero, creamos la clase **SampleServletService** que hereda de la clae **HttpServlet**, en la cual sobreescribimos el método heredado ```doGet```, quedando de la siguiente forma.
+
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/OverrideYdoGet.PNG">
+
+### 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación ```@WebServlet```, y en dicha anotación, defina la propiedad ```urlPatterns```, indicando la URL (que usted defina) a la cual se asociará el servlet.
+
+A continuación, agregamos la anotación ```@WebServlet``` y definimos la propiedad ```urlPatterns``` como se muestra a continuación.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/WebServlet.PNG">
