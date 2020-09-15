@@ -363,7 +363,7 @@ A continuación, creamos el archivo ```index.html``` en el directorio ```src/mai
 
 Ahora, para los puntos **18** y **19**, creamos un formulario que tenga un campo para ingresar un número con un botón de la siguiente forma.
 
-<img  src=https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/indexPOST.PNG">
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/indexPOST.PNG">
 
 ### 20. Recompile y ejecute la aplicación. Abra en su navegador en la página del formulario, y rectifique que la página hecha anteriormente sea mostrada. Ingrese los datos y verifique los resultados. Cambie el formulario para que ahora en lugar de POST, use el método GET . Qué diferencia observa?
 
