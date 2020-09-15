@@ -363,3 +363,4 @@ Ahora, creamos un formulario que tenga un campo para ingresar un número con un 
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/IndexFormulario.PNG">
 
+### 19. Revise este ejemplo de validación de formularios con javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browser se valide que el valor ingresado es un valor numérico.
