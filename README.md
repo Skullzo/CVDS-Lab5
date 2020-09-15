@@ -330,3 +330,11 @@ Implemente dicho método de manera que:
 Para indicar si el item existe o no existe, creamos un ArrayList con las cosas por hacer, y agregamos todo a la lista de cosas por hacer, en la cual mostramos la tabla HTML usando Service, e importamos el paquete **MalformedURLException** para manejar todas las excepciones que se generan dependiendo del tipo de error que se genera (ya sea Not Found, Bad Request o Internal Server Error, quedando de la siguiente forma.
 
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/OverrideYdoGet.PNG">
+
+## Parte III.
+
+### 16. En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
+
+A continuación, implementamos el método ```doPost```, quedando de la siguiente forma (similar a la implementación del ```doGet```).
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/MetododoPost.PNG">
