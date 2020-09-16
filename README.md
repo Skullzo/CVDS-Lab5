@@ -411,7 +411,9 @@ Para agregar las dependencias mas recientes de ```javax.javaee-api```, ```com.su
 </welcome-file-list>
 ```
 
+Ahora, para crear el archivo ```web.xml```, creamos ya sea en un Notepad++ o en un Bloc de Notas el archivo con el código, de la siguiente forma.
 
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto2.PNG">
 
 ### 3. Revise cada una de las configuraciones agregadas anteriormente para saber qué hacen y por qué se necesitan. Elimine las que no se necesiten.
 
