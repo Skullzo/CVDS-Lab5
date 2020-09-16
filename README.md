@@ -390,3 +390,30 @@ Escriba una aplicación web que utilice PrimeFaces para calcular la media, la mo
 <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/CasoDeUsoAplicacion.PNG">
 
 ### 1. Al proyecto Maven, debe agregarle las dependencias mas recientes de ```javax.javaee-api```, ```com.sun.faces.jsf-api```, ```com.sun.faces.jsf-impl```, ```javax.servlet.jstl``` y Primefaces (en el archivo pom.xml).
+
+
+
+### 2. Para que configure automáticamente el descriptor de despliegue de la aplicación (archivo web.xml), de manera que el framework JSF se active al inicio de la aplicación, en el archivo ```web.xml``` agregue la siguiente configuración:
+```
+<servlet>
+   <servlet-name>Faces Servlet</servlet-name>
+   <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+   <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+   <servlet-name>Faces Servlet</servlet-name>
+   <url-pattern>/faces/*</url-pattern>
+</servlet-mapping>
+<welcome-file-list>
+   <welcome-file>faces/index.jsp</welcome-file>
+</welcome-file-list>
+```
+
+
+### 3. Revise cada una de las configuraciones agregadas anteriormente para saber qué hacen y por qué se necesitan. Elimine las que no se necesiten.
+
+
+### 4. Ahora, va a crear un Backing-Bean de sesión, el cual, para cada usuario, mantendrá de lado del servidor las siguientes propiedades:
+  1. El conjunto de datos ingresados por el usuario.
+  2. Los resultados de las operaciones.
+  3. La cantidad de números ingresados por el usuario.
