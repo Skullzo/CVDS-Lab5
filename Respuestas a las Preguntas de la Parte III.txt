@@ -1,2 +1,0 @@
-Diferencias entre GET y POST:
-La principal diferencia entre GET y POST, es que GET lleva los datos de forma "visible" al cliente (navegador web). El medio de envío es la URL. Los datos los puede ver cualquiera, mientras que POST consiste en datos "ocultos" (porque el cliente no los ve) enviados por un formulario cuyo método de envío es post. Es adecuado para formularios. Los datos no son visibles.
