@@ -418,7 +418,9 @@ Ahora, para crear el archivo ```web.xml```, creamos ya sea en un Notepad++ o en 
 ### 3. Revise cada una de las configuraciones agregadas anteriormente para saber qué hacen y por qué se necesitan. Elimine las que no se necesiten.
 
 El archivo web.xml proporciona información sobre configuración y despliegue de los componentes web que componen una aplicación web.
+
 La especificación Java™ Servlet define el archivo descriptor de despliegue web.xml en términos de documentos de esquema XML. Para la compatibilidad con versiones anteriores, cualquier archivo web.xml escrito en el servlet 2.2 o posterior que funcionaba en versiones anteriores de WebSphere Application Server está soportado por el contenedor web.
+
 Para este proyecto, no se eliminó ninguna, ya que todas son necesarias para realizar este proyecto. [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/es/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/rweb_webxf.html)
 
 ### 4. Ahora, va a crear un Backing-Bean de sesión, el cual, para cada usuario, mantendrá de lado del servidor las siguientes propiedades:
