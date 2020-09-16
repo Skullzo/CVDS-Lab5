@@ -419,13 +419,17 @@ Escriba una aplicación web que utilice PrimeFaces para calcular la media, la mo
   1. El conjunto de datos ingresados por el usuario.
   2. Los resultados de las operaciones.
   3. La cantidad de números ingresados por el usuario.
+  
 Para hacer esto, cree una clase que tenga:
+
 * el constructor por defecto (sin parámetros)
 * los métodos ```get/set``` necesarios dependiendo si las propiedades son de escritura o lectura
 * coloque las anotaciones
   * ```@ManagedBean```, incluyendo el nombre: ```@ManagedBean(name = "calculadoraBean")```.
   * ```@ApplicationScoped```.
+  
 A la implementación de esta clase, agregue los siguientes métodos:
+
 * ```calculateMean```: Debe recibir como parámetro el listado de valores y retornar el promedio de los números en ella.
 * ```calculateStandardDeviation```: Debe recibir como parámetro el listado de valores y retornar el la desviación estandar de los números en ella.
 * ```calculateVariance```: Debe recibir como parámetro el listado de valores y retornar la varianza de los números en ella.
