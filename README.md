@@ -455,14 +455,14 @@ A la implementación de esta clase, agregue los siguientes métodos:
 
 ### 7. Al formulario, agregue:
 
-  a. Un elemento de tipo ```<p:outputLabel>``` para el resultado de la moda, sin embargo, este elemento se debe ocultar. Para ocultarlo, se puede agregar el estilo ```display: none;``` al elemento. Una forma de hacerlo es por medio de la propiedad ```style```.
+* a. Un elemento de tipo ```<p:outputLabel>``` para el resultado de la moda, sin embargo, este elemento se debe ocultar. Para ocultarlo, se puede agregar el estilo ```display: none;``` al elemento. Una forma de hacerlo es por medio de la propiedad ```style```.
   
-    * En una aplicacion real, no se debería tener este elemento, solo se crea con el fin de simplificar una prueba futura.
+   * En una aplicacion real, no se debería tener este elemento, solo se crea con el fin de simplificar una prueba futura.
     
-  b. Un elemento ```<p:inputText>``` para que el usuario ingrese los números. (Tenga en cuenta que una opción para separar los números es con “;” aunque no necesariamente debe hacerlo así) 
+* b. Un elemento ```<p:inputText>``` para que el usuario ingrese los números. (Tenga en cuenta que una opción para separar los números es con “;” aunque no necesariamente debe hacerlo así) 
   
   Por ejemplo:
   
   2; 3.5; 4.8; 5.1
   
-  c. Un elemento de tipo ```<p:outputLabel>``` para mostrar cada una de las operaciones resultantes. Y asocie dichos elementos al BackingBean de sesión a través de su propiedad ```value```, y usando como referencia el nombre asignado: value="#{guessBean.nombrePropiedad}"
+* c. Un elemento de tipo ```<p:outputLabel>``` para mostrar cada una de las operaciones resultantes. Y asocie dichos elementos al BackingBean de sesión a través de su propiedad ```value```, y usando como referencia el nombre asignado: value="#{guessBean.nombrePropiedad}"
