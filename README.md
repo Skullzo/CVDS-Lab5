@@ -391,7 +391,9 @@ Escriba una aplicación web que utilice PrimeFaces para calcular la media, la mo
 
 ### 1. Al proyecto Maven, debe agregarle las dependencias mas recientes de ```javax.javaee-api```, ```com.sun.faces.jsf-api```, ```com.sun.faces.jsf-impl```, ```javax.servlet.jstl``` y Primefaces (en el archivo pom.xml).
 
+Para agregar las dependencias mas recientes de ```javax.javaee-api```, ```com.sun.faces.jsf-api```, ```com.sun.faces.jsf-impl```, ```javax.servlet.jstl``` y Primefaces (en el archivo pom.xml), nos dirigimos al **pom.xml** y las agregamos de la siguiente forma.
 
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto1.PNG">
 
 ### 2. Para que configure automáticamente el descriptor de despliegue de la aplicación (archivo web.xml), de manera que el framework JSF se active al inicio de la aplicación, en el archivo ```web.xml``` agregue la siguiente configuración:
 ```
