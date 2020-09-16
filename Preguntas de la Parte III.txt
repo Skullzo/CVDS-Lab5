@@ -1,15 +1,17 @@
 1. Diferencias entre GET y POST:
 
-	La principal diferencia entre GET y POST, es que GET lleva los datos de forma "visible" al cliente (navegador web). El medio de envío es la URL. Los datos los puede ver
-	cualquiera, mientras que POST consiste en datos "ocultos" (porque el cliente no los ve) enviados por un formulario cuyo método de envío es post. Es adecuado para 
-	formularios. Los datos no son visibles.
+	La principal diferencia entre GET y POST, es que GET lleva los datos de forma "visible" al cliente (navegador web). El medio de envío es la URL. Los 
+	datos los puede ver	cualquiera, mientras que POST consiste en datos "ocultos" (porque el cliente no los ve) enviados por un formulario cuyo método 
+	de envío es post. Es adecuado para formularios. Los datos no son visibles.
 	
 2. Otros métodos similares que existen:
 
 	Método HEAD:
 	
-	El método HEAD es muy similar al GET (funcionalmente hablando), a excepción de que el servidor responde con líneas y headers, pero no con el body de la respuesta.
-	Este método realiza una acción similar al método GET solo que a diferencia de este HEAD solo solicita los metadatos de un recurso o archivo y no todo elemento como tal.
+	El método HEAD es muy similar al GET (funcionalmente hablando), a excepción de que el servidor responde con líneas y headers, pero no con el body de 
+	la respuesta.
+	Este método realiza una acción similar al método GET solo que a diferencia de este HEAD solo solicita los metadatos de un recurso o archivo y no todo 
+	elemento como tal.
 	
 	Por ejemplo:
 	
@@ -24,8 +26,8 @@
 
 	Método OPTIONS:
 	
-	Sirve para averiguar que métodos HTTP soporta el servidor web con respecto a un recurso en concreto o en caso de que haya un * en la URI se devuelven todos los métodos 
-	soportados por el servidor.
+	Sirve para averiguar que métodos HTTP soporta el servidor web con respecto a un recurso en concreto o en caso de que haya un * en la URI se devuelven 
+	todos los métodos soportados por el servidor.
 	
 	Método PUT:
 	
@@ -37,13 +39,13 @@
 	
 	Método TRACE:
 	
-	Este método Permite monitorear los mensajes que hay entre el cliente y el servidor web. Principalmente se usa con propósitos de diagnósticos de fallas o para revisar si 
-	existen servidores intermediarios en la conexión.
+	Este método Permite monitorear los mensajes que hay entre el cliente y el servidor web. Principalmente se usa con propósitos de diagnósticos de fallas
+	o para revisar si existen servidores intermediarios en la conexión.
 	
 	Método CONNECT:
 	
-	Este método se utiliza para solicitar una conexión de tipo túnel TCP/IP. Principalmente se utiliza cuando se necesita utilizar un proxy para una conexión segura cifrada 
-	HTTPS o para comunicaciones vía SSL.
+	Este método se utiliza para solicitar una conexión de tipo túnel TCP/IP. Principalmente se utiliza cuando se necesita utilizar un proxy para una 
+	conexión segura cifrada HTTPS o para comunicaciones vía SSL.
 	
 Referencias bibliográficas:
 
