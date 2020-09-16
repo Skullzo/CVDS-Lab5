@@ -466,3 +466,60 @@ A la implementación de esta clase, agregue los siguientes métodos:
   2; 3.5; 4.8; 5.1
   
 * c. Un elemento de tipo ```<p:outputLabel>``` para mostrar cada una de las operaciones resultantes. Y asocie dichos elementos al BackingBean de sesión a través de su propiedad ```value```, y usando como referencia el nombre asignado: value="#{guessBean.nombrePropiedad}"
+
+
+
+### 8. Al formulario, agregue dos botones de tipo ```<p:commandButton>```, cuatro para enviar la lista de números ingresados y ver el calculo de cada valor, y otro para reiniciar el juego.
+
+* a. El botón de Calculo de valores debe tener asociado a su propiedad update el nombre del formulario en el que se agregaron los campos antes descritos, de manera que al hacer clic, se ejecute un ciclo de JSF y se refresque la vista.
+
+* b. Debe tener también una propiedad ```actionListener``` con la cual se le indicará que, al hacer clic, se ejecutará el método CalculateXXX, creado en el backing-bean de sesión:
+```
+<p:commandButton update="guess_form" actionListener="#{calculadoraBean.calculateXXX}">...
+```
+
+* c. El botón de reiniciar juego tendrá las mismas propiedades de ```update``` y ```actionListener``` del otro con el valor correspondiente:
+```
+<p:commandButton update="…" actionListener="…">
+```
+
+
+
+### 9. Para verificar el funcionamiento de la aplicación, agregue el plugin tomcat-runner dentro de los plugins de la fase de construcción (build). Tenga en cuenta que en la configuración del plugin se indica bajo que ruta quedará la aplicación:
+
+* a. mvn package
+* b. mvn tomcat7:run
+
+Si no hay errores, la aplicación debería quedar accesible en la URL: http://localhost:8080/faces/calculadora.xhtml
+
+
+
+
+
+### 10. Si todo funcionó correctamente, realice las siguientes pruebas:
+
+* a. Abra la aplicación en un explorador. Realice algunas pruebas de aceptación con la aplicación.
+
+* b. Abra la aplicación en dos computadores diferentes. Si no dispone de uno, hágalo en dos navegadores diferentes (por ejemplo Chrome y Firefox; incluso se puede en un único navegador usando una ventana normal y una ventana de incógnito / privada). Haga cinco intentos en uno, y luego un intento en el otro. ¿Qué valor tiene cada uno?
+
+* c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique el código del backing-bean de manera que use la anotación @SessionScoped en lugar de @ApplicationScoped. Reinicie la aplicación y repita el ejercicio anterior.
+  * Dado la anterior, ¿Cuál es la diferencia entre los backing-beans de sesión y los de aplicación?
+* d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores)
+  * Ubique el código HTML generado por el servidor.
+  * Busque el elemento oculto, que contiene el número generado aleatoriamente.
+  * En la sección de estilos, deshabilite el estilo que oculta el elemento para que sea visible.
+  * Observe el cambio en la página, cada vez que se realiza un cambio en el estilo.
+  * Revise qué otros estilos se pueden agregar a los diferentes elementos y qué efecto tienen en la visualización de la página.
+  * Actualice la página. Los cambios de estilos realizados desaparecen, pues se realizaron únicamente en la visualización, la respuesta del servidor sigue siendo la misma, ya que el contenido de los archivos allí almacenados no se ha modificado.
+  * Revise qué otros cambios se pueden realizar y qué otra información se puede obtener de las herramientas de desarrollador.
+  
+  
+  
+
+### 11. Para facilitar los intentos del usuario, se agregará una lista de los últimos intentos fallidos realizados:
+
+* a. Agregue en el Backing-Bean, una propiedad que contenga una lista de valores ingresados por el usuario.
+
+* b. Cuando se reinicie el juego, limpie el contenido de la lista.
+
+* c. Busque cómo agregar una tabla a la página, cuyo contenido sea la lista de listas de números.
