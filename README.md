@@ -410,10 +410,49 @@ Escriba una aplicación web que utilice PrimeFaces para calcular la media, la mo
 ```
 
 
+
 ### 3. Revise cada una de las configuraciones agregadas anteriormente para saber qué hacen y por qué se necesitan. Elimine las que no se necesiten.
+
 
 
 ### 4. Ahora, va a crear un Backing-Bean de sesión, el cual, para cada usuario, mantendrá de lado del servidor las siguientes propiedades:
   1. El conjunto de datos ingresados por el usuario.
   2. Los resultados de las operaciones.
   3. La cantidad de números ingresados por el usuario.
+Para hacer esto, cree una clase que tenga:
+* el constructor por defecto (sin parámetros)
+* los métodos ```get/set``` necesarios dependiendo si las propiedades son de escritura o lectura
+* coloque las anotaciones
+  * ```@ManagedBean```, incluyendo el nombre: ```@ManagedBean(name = "calculadoraBean")```.
+  * ```@ApplicationScoped```.
+A la implementación de esta clase, agregue los siguientes métodos:
+* ```calculateMean```: Debe recibir como parámetro el listado de valores y retornar el promedio de los números en ella.
+* ```calculateStandardDeviation```: Debe recibir como parámetro el listado de valores y retornar el la desviación estandar de los números en ella.
+* ```calculateVariance```: Debe recibir como parámetro el listado de valores y retornar la varianza de los números en ella.
+* ```calculateMode```: Debe recibir como parámetro el listado de valores y retornar la moda de los números en ella.
+* ```restart```: Debe volver a iniciar la aplicación (Borrar el campo de texto para que el usuario agregue los datos).
+
+
+
+### 5. Cree una página XHTML, de nombre ```calculadora.xhtml``` (debe quedar en la ruta ```src/main/webapp```). Revise en la página 13 del manual de PrimeFaces, qué espacios de nombres XML requiere una página de PrimeFaces y cuál es la estructura básica de la misma.
+
+
+
+
+### 6. Con base en lo anterior, agregue un formulario con identificador ```calculadora_form``` con el siguiente contenido básico:
+```
+<h:body>
+ <h:form id="guess_form">
+
+ </h:form>
+</h:body>
+```
+
+
+### 7. Al formulario, agregue:
+  a. Un elemento de tipo ```<p:outputLabel>``` para el resultado de la moda, sin embargo, este elemento se debe ocultar. Para ocultarlo, se puede agregar el estilo ```display: none;``` al elemento. Una forma de hacerlo es por medio de la propiedad ```style```.
+    * En una aplicacion real, no se debería tener este elemento, solo se crea con el fin de simplificar una prueba futura.
+  b. Un elemento ```<p:inputText>``` para que el usuario ingrese los números. (Tenga en cuenta que una opción para separar los números es con “;” aunque no necesariamente debe hacerlo así) 
+  Por ejemplo:
+  2; 3.5; 4.8; 5.1
+  c. Un elemento de tipo ```<p:outputLabel>``` para mostrar cada una de las operaciones resultantes. Y asocie dichos elementos al BackingBean de sesión a través de su propiedad ```value```, y usando como referencia el nombre asignado: value="#{guessBean.nombrePropiedad}"
