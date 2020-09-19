@@ -502,7 +502,7 @@ Y, por último, creamos los métodos ```mean```, ```variance```, ```standardDevi
 
 A continuación, para la realización de los puntos **5**, **6**, **7** y **8**, creamos la página XHTML de nombre ```calculadora.xhtml``` de la siguiente forma.
 
-<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto5.PNG">
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto5%2C6%2C7%2C8.PNG">
 
 ### 9. Para verificar el funcionamiento de la aplicación, agregue el plugin tomcat-runner dentro de los plugins de la fase de construcción (build). Tenga en cuenta que en la configuración del plugin se indica bajo que ruta quedará la aplicación:
 
