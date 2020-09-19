@@ -32,13 +32,12 @@ public class Calculadora{
 		for (int i = 0; i<valores.length;i++) {
 			resultadoValores[i]=Double.parseDouble(valores[i]);			
 		}
-		double cantidadNumero = resultadoValores.length;
+		cantidadNumero = resultadoValores.length;
 		return resultadoValores;
 	}
 	
 	
-	public static double mean() {
-		double resultadoMean=0;
+	public static double calculateMean() {
 		double[] m = cadenaADouble();
         double sum = 0;
         for (int i = 0; i < m.length; i++) {
@@ -48,25 +47,23 @@ public class Calculadora{
         return resultadoMean ;
     }
     
-    public static double variance(){
-    	double resultadoVariance=0;
+    public static double calculateVariance(){
 		double[] m = cadenaADouble();
         double sqDiff = 0;
         double n = m.length;
         for (int i = 0; i < n; i++) 
-            sqDiff += (m[i] - mean()) * (m[i] - mean());
+            sqDiff += (m[i] - calculateMean()) * (m[i] - calculateMean());
         resultadoVariance = sqDiff/n; 
         return resultadoVariance;
     }
     
-    public static double standardDeviation(){
-    	double resultadoStandardDeviation=0;
+    public static double calculateStandardDeviation(){
 		double[] m = cadenaADouble();    	
-        resultadoStandardDeviation = Math.sqrt(variance());
+        resultadoStandardDeviation = Math.sqrt(calculateVariance());
         return resultadoStandardDeviation;
     }
     
-    public static double mode() {
+    public static double calculateMode() {
         double maxCount = 0;
         double resultadoMode=0;
         double m[] = cadenaADouble();
@@ -123,8 +120,8 @@ public class Calculadora{
 		return resultadoStandardDeviation;
 	}
 
-	public void setResultadoStandardDeviation(double resultadoStandartDeviation) {
-		this.resultadoStandardDeviation = resultadoStandartDeviation;
+	public void setResultadoStandardDeviation(double resultadoStandardDeviation) {
+		this.resultadoStandardDeviation = resultadoStandardDeviation;
 	}
 
 	public double getResultadoMode() {
