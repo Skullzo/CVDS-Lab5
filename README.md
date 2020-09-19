@@ -511,9 +511,13 @@ A continuación, para la realización de los puntos **5**, **6**, **7** y **8**,
 
 Si no hay errores, la aplicación debería quedar accesible en la URL: http://localhost:8080/faces/calculadora.xhtml
 
+Al compilar todo el programa ejecutando el comando ```mvn package```, vemos que ha sido compilado completamente y satisfactoriamente.
 
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto9mvnpackage.PNG">
 
+Luego, para ejecutar el servicio de tomcat y correr nuestro programa en el navegador web, ejecutamos el comando ```mvn tomcat7:run```, y presionamos Enter, quedando de la siguiente forma.
 
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto9mvntomcat.PNG">
 
 ### 10. Si todo funcionó correctamente, realice las siguientes pruebas:
 
@@ -523,6 +527,10 @@ Si no hay errores, la aplicación debería quedar accesible en la URL: http://lo
 
 * c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique el código del backing-bean de manera que use la anotación @SessionScoped en lugar de @ApplicationScoped. Reinicie la aplicación y repita el ejercicio anterior.
   * Dado la anterior, ¿Cuál es la diferencia entre los backing-beans de sesión y los de aplicación?
+  
+  Un @SessionScoped vive tanto como la sesión HTTP establecida. 
+  Un @ApplicationScoped  vive mientras se ejecute la aplicación web.
+  
 * d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores)
   * Ubique el código HTML generado por el servidor.
   * Busque el elemento oculto, que contiene el número generado aleatoriamente.
