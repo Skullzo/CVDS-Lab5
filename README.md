@@ -529,10 +529,16 @@ Luego, para ejecutar el servicio de tomcat y correr nuestro programa en el naveg
   * Dado la anterior, ¿Cuál es la diferencia entre los backing-beans de sesión y los de aplicación?
   
   Un @SessionScoped vive tanto como la sesión HTTP establecida. 
+  
   Un @ApplicationScoped  vive mientras se ejecute la aplicación web.
   
 * d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores)
   * Ubique el código HTML generado por el servidor.
+  
+    Para ubicar el código HTML generado por el servidor, en el navegador (que en nuestro caso es Google Chrome) presionamos las teclas ```Ctrl + Shift + J```. Al realizar eso, vemos que nos aparece el código HTML generado por el servidor.
+  
+    <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto10d.1.PNG">
+  
   * Busque el elemento oculto, que contiene el número generado aleatoriamente.
   * En la sección de estilos, deshabilite el estilo que oculta el elemento para que sea visible.
   * Observe el cambio en la página, cada vez que se realiza un cambio en el estilo.
@@ -540,7 +546,9 @@ Luego, para ejecutar el servicio de tomcat y correr nuestro programa en el naveg
   * Actualice la página. Los cambios de estilos realizados desaparecen, pues se realizaron únicamente en la visualización, la respuesta del servidor sigue siendo la misma, ya que el contenido de los archivos allí almacenados no se ha modificado.
   * Revise qué otros cambios se pueden realizar y qué otra información se puede obtener de las herramientas de desarrollador.
   
-  
+
+
+
   
 
 ### 11. Para facilitar los intentos del usuario, se agregará una lista de los últimos intentos fallidos realizados:
