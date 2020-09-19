@@ -444,9 +444,17 @@ A la implementación de esta clase, agregue los siguientes métodos:
 * ```calculateMode```: Debe recibir como parámetro el listado de valores y retornar la moda de los números en ella.
 * ```restart```: Debe volver a iniciar la aplicación (Borrar el campo de texto para que el usuario agregue los datos).
 
-Para la realización de este punto, primero se crearon las anotaciones ```@ManagedBean(name = "calculadoraBean")``` y ```@ApplicationScoped``` de la siguiente forma.
+Para la realización de este punto, primero se crearon los métodos ```get/set``` necesarios de la siguiente forma.
 
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto4-1.PNG">
 
+Luego, se crearon las anotaciones ```@ManagedBean(name = "calculadoraBean")``` y ```@ApplicationScoped``` de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto4-2.PNG">
+
+Y, por último, creamos los métodos ```mean```, ```variance```, ```standardDeviation```, ```mode``` y ```restart``` de la siguiente forma.
+
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto4-3.PNG">
 
 ### 5. Cree una página XHTML, de nombre ```calculadora.xhtml``` (debe quedar en la ruta ```src/main/webapp```). Revise en la página 13 del manual de PrimeFaces, qué espacios de nombres XML requiere una página de PrimeFaces y cuál es la estructura básica de la misma.
 
