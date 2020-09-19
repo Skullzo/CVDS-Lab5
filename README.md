@@ -528,9 +528,9 @@ Luego, para ejecutar el servicio de tomcat y correr nuestro programa en el naveg
 * c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique el código del backing-bean de manera que use la anotación @SessionScoped en lugar de @ApplicationScoped. Reinicie la aplicación y repita el ejercicio anterior.
   * Dado la anterior, ¿Cuál es la diferencia entre los backing-beans de sesión y los de aplicación?
   
-  Un @SessionScoped vive tanto como la sesión HTTP establecida. 
+    Un @SessionScoped vive tanto como la sesión HTTP establecida. 
   
-  Un @ApplicationScoped  vive mientras se ejecute la aplicación web.
+    Un @ApplicationScoped  vive mientras se ejecute la aplicación web.
   
 * d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores)
   * Ubique el código HTML generado por el servidor.
