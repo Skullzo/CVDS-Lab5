@@ -13,34 +13,63 @@ import javax.faces.bean.*;
 
 @SessionScoped
 public class Calculadora{
-	
-    public Calculadora(){     	
-    }
 
-    public static double mean(double[] m) {
+	static String cadenaEntrada = "";
+	static double resultadoMean = 0;
+	static double resultadoVariance = 0;
+	static double resultadoStandardDeviation = 0;
+	static double resultadoMode = 0;
+	static double cantidadNumero = 0;
+
+
+	public Calculadora(){
+    	
+    }
+	
+	private static double[] cadenaADouble() {
+		String[] valores = cadenaEntrada.split(";");
+		double[] resultadoValores = new double[valores.length];
+		for (int i = 0; i<valores.length;i++) {
+			resultadoValores[i]=Double.parseDouble(valores[i]);			
+		}
+		double cantidadNumero = resultadoValores.length;
+		return resultadoValores;
+	}
+	
+	
+	public static double mean() {
+		double resultadoMean=0;
+		double[] m = cadenaADouble();
         double sum = 0;
         for (int i = 0; i < m.length; i++) {
             sum += m[i];
         }
-        return sum / m.length;
+        resultadoMean = sum / m.length;
+        return resultadoMean ;
     }
     
-    public static double variance(double m[]){
+    public static double variance(){
+    	double resultadoVariance=0;
+		double[] m = cadenaADouble();
         double sqDiff = 0;
         double n = m.length;
         for (int i = 0; i < n; i++) 
-            sqDiff += (m[i] - mean(m)) * (m[i] - mean(m));
-         
-        return (double)sqDiff/n;
+            sqDiff += (m[i] - mean()) * (m[i] - mean());
+        resultadoVariance = sqDiff/n; 
+        return resultadoVariance;
     }
     
-    public static double standardDeviation(double m[]){
-        return Math.sqrt(variance(m));
+    public static double standardDeviation(){
+    	double resultadoStandardDeviation=0;
+		double[] m = cadenaADouble();    	
+        resultadoStandardDeviation = Math.sqrt(variance());
+        return resultadoStandardDeviation;
     }
     
-    public static double mode(double m[]) {
-        double maxValue = 0; 
+    public static double mode() {
         double maxCount = 0;
+        double resultadoMode=0;
+        double m[] = cadenaADouble();
         double n = m.length;
         for (int i = 0; i < n; ++i) {
            double count = 0;
@@ -50,11 +79,78 @@ public class Calculadora{
            }
            if (count > maxCount) {
               maxCount = count;
-              maxValue = m[i];
+              resultadoMode = m[i];
            }
         }
-        return maxValue;
+        return resultadoMode;
      }
+    
+    public static void restart(){
+    	cadenaEntrada = "";
+    	resultadoMean = 0;
+    	resultadoVariance = 0;
+    	resultadoStandardDeviation = 0;
+    	resultadoMode = 0;
+    	cantidadNumero = 0;
+    }
+         
+    
+    public String getCadenaEntrada() {
+		return cadenaEntrada;
+	}
+
+	public void setCadenaEntrada(String cadenaEntrada) {
+		this.cadenaEntrada = cadenaEntrada;
+	}
+
+	public double getResultadoMean() {
+		return resultadoMean;
+	}
+
+	public void setResultadoMean(double resultadoMean) {
+		this.resultadoMean = resultadoMean;
+	}
+
+	public double getResultadoVariance() {
+		return resultadoVariance;
+	}
+
+	public void setResultadoVariance(double resultadoVariance) {
+		this.resultadoVariance = resultadoVariance;
+	}
+
+	public double getResultadoStandardDeviation() {
+		return resultadoStandardDeviation;
+	}
+
+	public void setResultadoStandardDeviation(double resultadoStandartDeviation) {
+		this.resultadoStandardDeviation = resultadoStandartDeviation;
+	}
+
+	public double getResultadoMode() {
+		return resultadoMode;
+	}
+
+	public void setResultadoMode(double resultadoMode) {
+		this.resultadoMode = resultadoMode;
+	}
+
+	public double getCantidadNumero() {
+		return cantidadNumero;
+	}
+
+	public void setCantidadNumero(int cantidadNumero) {
+		this.cantidadNumero = cantidadNumero;
+	}
+	
+	@Override
+	public String toString() {
+		return "Calculadora [cadenaEntrada=" + cadenaEntrada + ", resultadoMean=" + resultadoMean
+				+ ", resultadoVariance=" + resultadoVariance + ", resultadoStandartDeviation="
+				+ resultadoStandardDeviation + ", resultadoMode=" + resultadoMode + ", cantidadNumero=" + cantidadNumero
+				+ "]";
+	}
+
 }
     
 
