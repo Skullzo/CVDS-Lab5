@@ -458,8 +458,9 @@ Y, por último, creamos los métodos ```mean```, ```variance```, ```standardDevi
 
 ### 5. Cree una página XHTML, de nombre ```calculadora.xhtml``` (debe quedar en la ruta ```src/main/webapp```). Revise en la página 13 del manual de PrimeFaces, qué espacios de nombres XML requiere una página de PrimeFaces y cuál es la estructura básica de la misma.
 
+A continuación, creamos la página XHTML de nombre ```calculadora.xhtml``` de la siguiente forma.
 
-
+<img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto5.PNG">
 
 ### 6. Con base en lo anterior, agregue un formulario con identificador ```calculadora_form``` con el siguiente contenido básico:
 ```
