@@ -535,21 +535,35 @@ Luego, para ejecutar el servicio de tomcat y correr nuestro programa en el naveg
 * d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores)
   * Ubique el código HTML generado por el servidor.
   
-    Para ubicar el código HTML generado por el servidor, en el navegador (que en nuestro caso es Google Chrome) presionamos las teclas ```Ctrl + Shift + J```. Al realizar eso, vemos que nos aparece el código HTML generado por el servidor.
+    Para ubicar el código HTML generado por el servidor, en el navegador (que en nuestro caso es Google Chrome) presionamos la tecla ```F12```. Al realizar eso, vemos que nos aparece el código HTML generado por el servidor.
   
     <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto10d.1.PNG">
   
   * Busque el elemento oculto, que contiene el número generado aleatoriamente.
+  
+    Para buscar el elemento oculto, que contiene el número generado aleatoriamente, realizamos el siguiente procedimiento.
+    
+    <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto10d.2.PNG">
+  
   * En la sección de estilos, deshabilite el estilo que oculta el elemento para que sea visible.
+  
+    Para deshabilitar el estilo que oculta el elemento para que sea visible, cambiamos la siguiente línea de código, quedando de la siguiente forma.
+  
+    <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto10d.3.PNG">
+  
   * Observe el cambio en la página, cada vez que se realiza un cambio en el estilo.
   * Revise qué otros estilos se pueden agregar a los diferentes elementos y qué efecto tienen en la visualización de la página.
+  
+    Los otros estilos se pueden agregar a los diferentes elementos, y el efecto que tienen en la visualización de la página, son los siguientes.
+  
+    <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto10d.5.PNG">
+  
   * Actualice la página. Los cambios de estilos realizados desaparecen, pues se realizaron únicamente en la visualización, la respuesta del servidor sigue siendo la misma, ya que el contenido de los archivos allí almacenados no se ha modificado.
   * Revise qué otros cambios se pueden realizar y qué otra información se puede obtener de las herramientas de desarrollador.
   
-
-
-
+    Los otros cambios que se pueden realizar y la información que se puede obtener de las herramientas de desarrollador son los siguientes.
   
+    <img  src="https://github.com/JuanMunozD/CVDS5/blob/master/Im%C3%A1genes/Punto10dUltimo.PNG">
 
 ### 11. Para facilitar los intentos del usuario, se agregará una lista de los últimos intentos fallidos realizados:
 
@@ -558,3 +572,5 @@ Luego, para ejecutar el servicio de tomcat y correr nuestro programa en el naveg
 * b. Cuando se reinicie el juego, limpie el contenido de la lista.
 
 * c. Busque cómo agregar una tabla a la página, cuyo contenido sea la lista de listas de números.
+
+  Teniendo en cuenta el procedimiento realizado desde el **Punto 9**, todo el **Punto 11** ha sido realizado con base a las implementaciones ya anteriormente realizadas desde el **Punto 9** en adelante.
