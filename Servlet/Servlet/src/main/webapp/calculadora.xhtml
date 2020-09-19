@@ -6,21 +6,24 @@
 <h:body>
     <h:form id="calculadora_form">
         <p:outputPanel>
-            <p:inputText binding="#{numInput}"></p:inputText>
+            <p:inputText value="#{calculadoraBean.cadenaEntrada}"></p:inputText>
         </p:outputPanel>
         <p:outputPanel>
-        <p:outputLabel value="Mean: #{calculadoraBean.mean}"></p:outputLabel>
+        <p:outputLabel value="Mean: #{calculadoraBean.resultadoMean}"></p:outputLabel>
+        </p:outputPanel>
+		<p:outputPanel>
+        <p:outputLabel value="Variance: #{calculadoraBean.resultadoVariance}"></p:outputLabel>
         </p:outputPanel>
         <p:outputPanel>
-        <p:outputLabel value="Standard Deviation: #{calculadoraBean.standardDeviation}"></p:outputLabel>
+        <p:outputLabel value="Standard Deviation: #{calculadoraBean.resultadoStandardDeviation}"></p:outputLabel>
         </p:outputPanel>
         <p:outputPanel>
-        <p:outputLabel value="Variance: #{calculadoraBean.variance}"></p:outputLabel>
+        <p:outputLabel value="Mode: #{calculadoraBean.resultadoMode}"></p:outputLabel>
         </p:outputPanel>
-        <p:outputPanel>
-        <p:outputLabel value="Mode: #{calculadoraBean.mode}"></p:outputLabel>
-        </p:outputPanel>
-        <p:commandButton value="Agregar" update="calculadora_form" action="#{calculadoraBean.addNumber(numInput.value)}"></p:commandButton>
+        <p:commandButton value="Mean" update="calculadora_form" action="#{calculadoraBean.calculateMean()}"></p:commandButton>
+		<p:commandButton value="Variance" update="calculadora_form" action="#{calculadoraBean.calculateVariance()}"></p:commandButton>
+		<p:commandButton value="StandardDeviation" update="calculadora_form" action="#{calculadoraBean.calculateStandardDeviation()}"></p:commandButton>
+		<p:commandButton value="Mode" update="calculadora_form" action="#{calculadoraBean.calculateMode()}"></p:commandButton>
         <p:commandButton value="Borrar" update="calculadora_form" action="#{calculadoraBean.restart()}"></p:commandButton>
     </h:form>
 </h:body>
